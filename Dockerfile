@@ -12,12 +12,13 @@ COPY . .
 RUN pnpm check \
     && pnpm build
 
-FROM nginx:1.29.2-alpine AS runner
+FROM nginx:1.30.6-alpine AS runner
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-RUN chown -R nginx:nginx /usr/share/nginx/html \
+RUN apk upgrade --no-cache \
+    && chown -R nginx:nginx /usr/share/nginx/html \
     && touch /tmp/nginx.pid \
     && chown nginx:nginx /tmp/nginx.pid
 
