@@ -7,7 +7,7 @@ Starter template for building documentation sites with
 
 The production deployment target is Dokploy. Dokploy should track the `master`
 branch and build the repository with the included `Dockerfile`. The container
-serves the generated static site on port `8080`.
+serves the generated static site on port `8081`.
 
 The GitHub Actions workflow validates the Astro project and builds/scans the
 container on pull requests and pushes to `master`. Configure Dokploy's GitHub
