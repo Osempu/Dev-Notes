@@ -1,22 +1,20 @@
-# Astro Lotus Starter
+# dev-notes
 
 Starter template for building documentation sites with
 [`@prosefly/astro-theme-lotus`](https://github.com/prosefly/astro-theme-lotus).
 
 ## Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fprosefly%2Fastro-template-lotus-starter&project-name=lotus-starter&repository-name=lotus-starter)
+The production deployment target is Dokploy. Dokploy should track the `master`
+branch and build the repository with the included `Dockerfile`. The container
+serves the generated static site on port `8080`.
 
-This starter deploys to Vercel as a static Astro site. Vercel runs
-`pnpm build` and serves the generated `dist` directory.
+The GitHub Actions workflow validates the Astro project and builds/scans the
+container on pull requests and pushes to `master`. Configure Dokploy's GitHub
+webhook to deploy after a successful push to `master`; keep its URL and token in
+protected GitHub/Dokploy settings.
 
-## Use This Template
-
-```sh
-pnpm create astro@latest --template prosefly/astro-template-lotus-starter
-```
-
-Or clone this repository directly:
+## Local development
 
 ```sh
 pnpm install

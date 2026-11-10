@@ -2,5 +2,11 @@ import { defineConfig } from 'astro/config';
 import lotus from '@prosefly/astro-theme-lotus';
 
 export default defineConfig({
-  integrations: [lotus()],
+  integrations: [
+    lotus({
+      components: {
+        Assistant: './src/components/LotusAssistantWithTransitions.astro',
+      },
+    }),
+  ],
 });

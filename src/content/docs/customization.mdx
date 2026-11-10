@@ -22,7 +22,7 @@ Most starter customization happens in `theme.config.json`.
 
 Use `siteNav` for top-level links and `docsNav` for docs navigation.
 
-```json title="theme.config.json"
+```json title="theme.config.json" showLineNumbers=true
 {
   "docsBase": "/",
   "siteNav": [{ "label": "Docs", "href": "/overview/" }],
@@ -33,6 +33,34 @@ Use `siteNav` for top-level links and `docsNav` for docs navigation.
     }
   ]
 }
+```
+
+```csharp title="mycode.cs" showLineNumbers=true
+    static void Main()
+    {
+        Console.Write("Enter two integers: ");
+        string? input = Console.ReadLine();
+
+        // Validate input
+        if (string.IsNullOrWhiteSpace(input))
+        {
+            Console.WriteLine("No input provided.");
+            return;
+        }
+
+        string[] parts = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+        if (parts.Length != 2 ||
+            !int.TryParse(parts[0], out int num1) ||
+            !int.TryParse(parts[1], out int num2))
+        {
+            Console.WriteLine("Invalid input. Please enter two integers separated by space.");
+            return;
+        }
+
+        int result = LCM(num1, num2);
+        Console.WriteLine($"LCM of {num1} and {num2} is: {result}");
+    }
 ```
 
 ## Content

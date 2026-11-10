@@ -52,6 +52,39 @@
           }
         }
       ]
+    },
+    {
+      "label": "Data Structures",
+      "icon": "lucide:braces",
+      "items": [
+        {
+          "autogenerate": {
+            "directory": "data-structures"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Algorithms",
+      "icon": "lucide:brackets",
+      "items": [
+        {
+          "autogenerate": {
+            "directory": "algorithms"
+          }
+        }
+      ]
+    },
+    {
+      "label": "System Design",
+      "icon": "lucide:diagram-flow-horizontal",
+      "items": [
+        {
+          "autogenerate": {
+            "directory": "system-design"
+          }
+        }
+      ]
     }
   ],
   "footer": {
@@ -68,7 +101,7 @@
             "label": "Theme Source",
             "href": "https://github.com/prosefly/astro-theme-lotus",
             "external": true
-          }
+          },
           {
             "label": "Template Source",
             "href": "https://github.com/prosefly/astro-template-lotus-starter",
